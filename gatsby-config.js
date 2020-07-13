@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'AK\'s Japanese Adventure',
+    title: 'AK\'s Japanese Adventure!',
     description: 'just learning some gatsby',
     author: 'Alisa Kitkina',
   },
