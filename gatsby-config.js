@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'AK\'s Japanese Adventure!',
     description: 'just learning some gatsby',
-    author: 'Alisa Kitkina',
+    author: 'ak',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,11 +10,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
