@@ -10,17 +10,18 @@ import Layout from '../components/layout';
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark {
+            allContentfulBlogPost (
+                sort: {
+                    fields: publishedDate,
+                    order: DESC
+                }
+            ) {
                 edges {
                     node {
-                        frontmatter {
-                            title
-                            date
+                        title
+                        slug
+                        publishedDate (formatString: "MMMM Do, YYYY")
                         }
-                        fields {
-                            slug
-                        }
-                    }
                 }
             }
         }
@@ -33,12 +34,12 @@ const BlogPage = () => {
 
                 <ol className={blogStyles.posts}>
                     {
-                        data.allMarkdownRemark.edges.map((edge) => {
+                        data.allContentfulBlogPost.edges.map((edge) => {
                             return (
                                 <li className={blogStyles.post}>
-                                    <Link to={`/blog/${edge.node.fields.slug}`}>
-                                        <h2>{edge.node.frontmatter.title}</h2>
-                                        <p>{edge.node.frontmatter.date}</p>
+                                    <Link to={`/blog/${edge.node.slug}`}>
+                                        <h2>{edge.node.title}</h2>
+                                        <p>{edge.node.publishedDate}</p>
                                     </Link>
                                 </li>
                             )
