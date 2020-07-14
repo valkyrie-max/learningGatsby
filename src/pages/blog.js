@@ -6,6 +6,7 @@ import {
 
 import blogStyles from './blog.module.scss'
 import Layout from '../components/layout';
+import Head from '../components/head'
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
@@ -30,6 +31,7 @@ const BlogPage = () => {
     return (
         <div>
             <Layout>
+                <Head title="Blog" />
                 <h1>My Japanese adventure!</h1>
 
                 <ol className={blogStyles.posts}>
