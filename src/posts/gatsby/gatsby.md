@@ -5,6 +5,8 @@
 
 I just made a thing. 
 
+![an ugly image of a character (mista) from jjba](mista.jpg)
+
 ## Random List
 1. gatsby
 2. jojo 
