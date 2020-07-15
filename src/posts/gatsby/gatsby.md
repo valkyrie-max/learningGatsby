@@ -1,6 +1,5 @@
 ---
     title: "gatsby bootcamp tutorial"
-    date: "07/13/2020"
 ---
 
 I just made a thing. 
